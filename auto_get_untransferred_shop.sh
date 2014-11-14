@@ -2,7 +2,7 @@
 #FileName:auto_get_untransferred_shop.sh
 #Author:Robin
 #Date:2014-3-13 16:00:34
-#Desc:Auto get untransfferd shop infomation
+#Desc:Auto get untransfferd shop infomation. Use this script in RHEL 6.1.
 
 #设置以逗号作为行分隔
 IFS=,

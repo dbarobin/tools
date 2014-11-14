@@ -2,7 +2,7 @@
 #Author:Robin Wen
 #Date:2013年8月31日8:29:22
 #Log:2013年11月8日10:44:38 add Optimizie system
-#Desc:Script of Initialize and Optimizie Linux System
+#Desc:Script of Initialize and Optimizie Linux System. Use this script in RHEL 6.1.
 
 #打印功能菜单
 echo "****************************************************************"
@@ -282,4 +282,3 @@ do
 			;;
 	esac
 done
-

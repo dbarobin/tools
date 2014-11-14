@@ -1,7 +1,7 @@
 #!/bin/bash
 #Author:Robin Wen
 #Date:2013年8月31日8:29:22
-#Desc:Auto config mysql
+#Desc:Auto config mysql after the mysql installation.
 
 groupadd -g 27 mysql
 useradd -u 27 -g 27 -r -M -s /sbin/nologin mysql

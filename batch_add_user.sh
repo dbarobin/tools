@@ -1,7 +1,7 @@
 #!/bin/bash
 #Author:Robin Wen
 #Date:2013年8月31日8:29:22
-#Desc:Batch Add user
+#Desc:Batch add user in production env. Use this script in RHEL 6.1.
 
 file=userlist
 

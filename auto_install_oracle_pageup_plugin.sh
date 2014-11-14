@@ -1,6 +1,6 @@
 #!/bin/bash
 #Author:Robin Wen
-#Desc:Auto Install SQL*Plus Plugin-Uniread
+#Desc:Auto Install SQL*Plus Pageup Plugin Uniread. Use this script in RHEL 6.1.
 
 #1.Install dependency
 yum install perl* -y

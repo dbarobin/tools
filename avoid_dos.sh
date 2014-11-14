@@ -1,7 +1,7 @@
 #!/bin/bash
 #Author:Robin yWen
 #Date:2013- 9- 14 11:07:25
-#Func:Analyze  /var/log/httpd/access_log, to avoid dos attack.
+#Func:Analyze /var/log/httpd/access_log to avoid dos attack. Use this script in RHEL 6.1.
 
 while  :
 do

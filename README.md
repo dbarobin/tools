@@ -1,4 +1,84 @@
-tools
-=====
+# Tools-By Robin Wen #
 
-Tools of MySQL, Oracle and Shell.
+## Project Summary ##
+
+> Tools of MySQL, Oracle and Shell. This scripts collected via work. You may get massive useful skills throgh the script.
+
+## Version Information ##
+> Majority of scripts pass-test in RHEL 6.1, part of scripts pass-test in Debian 7.6/Ubuntu 14.04. I will give clear indication of this scripts in the **Scripts and Dirs Summary**.
+
+## Change Log ##
+
+2014-11-11
+> Documentation version is **1.0**, Documentation name is **Tools-By Robin Wen**, Comment is **All of Scripts pass-test**, By Robin。
+
+## Lists of File ##
+
+* auto_backup_database.sh [shell]
+* auto_backup_file.sh [shell]
+* auto_create_bondnetwork.sh [shell]
+* auto_get_untransferred_shop.sh [shell]
+* auto_import_data.sh [shell]
+* auto_install_lamp.sh [shell]
+* auto_install_lnmp.sh [shell]
+* auto_config_mysql.sh [shell]
+* auto_install_oracle_pageup_plugin.sh [shell]
+* avoid_dos.sh [shell]
+* batch_add_user.sh [shell]
+* init_opt_system_robinwen.sh [shell]
+* oracle-install [d]
+
+## Scripts and Dirs Summary ##
+
+### auto_backup_database.sh [shell] ###
+> Backup MySQL databases. Use this script in RHEL 6.1.
+
+### auto_backup_file.sh [shell] ###
+> Auto backup files to remote file server. Use this script in RHEL 6.1.
+
+### auto_create_bondnetwork.sh [shell] ###
+> Auto create bondnetwork. Use this script in RHEL 6.1.
+
+### auto_get_untransferred_shop.sh [shell] ###
+> Auto get untransfferd shop infomation. Use this script in RHEL 6.1.
+
+### auto_import_data.sh [shell] ###
+> Auto Import Data To MS SQL. Use this script in RHEL 6.1.
+
+### auto_install_lamp.sh [shell] ###
+> LAMP:Linux + Apache + MySQL + PHP
+> Auto install LAMP in rhel 6.1. Use this script in RHEL 6.1. You must prepare the following packages in the opt dir: mysql-5.1.59.tar.gz, httpd-2.2.21.tar.gz, php-5.3.6.tar.bz2.
+
+### auto_install_lnmp.sh [shell] ###
+> LANP:Linux + Nginx + MySQL + PHP
+> Auto install LAMP in rhel 6.1. Use this script in RHEL 6.1. You must prepare the following packages in the opt dir: mysql-5.1.59.tar.gz, nginx-1.2.6.tar.gz, php-5.3.6.tar.bz2.
+
+### auto_config_mysql.sh [shell] ###
+> Auto config mysql after the mysql installation.
+
+### auto_install_oracle_pageup_plugin.sh [shell] ###
+> Auto Install SQL*Plus Pageup Plugin Uniread. Use this script in RHEL 6.1.
+
+### avoid_dos.sh [shell] ###
+> Analyze /var/log/httpd/access_log to avoid dos attack. Use this script in RHEL 6.1.
+
+### batch_add_user.sh [shell] ###
+> Batch add user in production env. Use this script in RHEL 6.1.
+
+### init_opt_system_robinwen.sh [shell] ###
+> Script of Initialize and Optimizie Linux System. Use this script in RHEL 6.1.
+
+### oracle-install [d] ###
+> Install  database software  11g  on your system. You may to use this scripts as root. Use this script in RHEL 6.1. CD the oracle-install dir, see the readme.txt, the you got it!
+
+
+Enjoy!
+
+## About Author ##
+
+温国兵
+
+* Robin Wen
+* Gmail：dbarobinwen@gmail.com
+* CSDN：http://blog.csdn.net/justdb
+* GitHub：https://github.com/dbarobinwen

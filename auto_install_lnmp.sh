@@ -1,8 +1,8 @@
 #!/bin/bash
 #Author:Robin Wen
 #Date:2013年8月31日8:29:22
-#Desc:Auto install LNMP
-#LNMP:linux + nginx + mysql + php
+#Desc:Auto install LNMP in rhel 6.1. Use this script in RHEL 6.1. You must prepare the following packages in the opt dir: mysql-5.1.59.tar.gz, nginx-1.2.6.tar.gz, php-5.3.6.tar.bz2.
+#LNMP:Linux + Nginx + MySQL + PHP 
 
 yum groupinstall "Development tools" -y 
 ###########install mysql##################

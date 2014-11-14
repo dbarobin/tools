@@ -1,8 +1,8 @@
 #!/bin/bash
 #Author:Robin Wen
 #Date:2013年8月31日8:29:22
-#Desc:Auto install LAMP
-#linux + apache + mysql + php
+#Desc:Auto install LAMP in rhel 6.1. Use this script in RHEL 6.1. You must prepare the following packages in the opt dir: mysql-5.1.59.tar.gz, httpd-2.2.21.tar.gz, php-5.3.6.tar.bz2.
+#LAMP:Linux + Apache + MySQL + PHP
 
 logdir=/var/log/lamp-log
 mkdir $logdir

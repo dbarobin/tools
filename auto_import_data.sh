@@ -1,6 +1,6 @@
 #!/bin/bash
 #FileName:auto_import_data.sh
-#Desc:Auto Import Data To MS SQL
+#Desc:Auto Import Data To MS SQL. Use this script in RHEL 6.1.
 #Date:2014-3-14 17:53:12
 #Author:Robin
 
