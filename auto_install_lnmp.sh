@@ -2,7 +2,7 @@
 #Author:Robin Wen
 #Date:2013年8月31日8:29:22
 #Desc:Auto install LNMP
-# linux + nginx + mysql + php
+#LNMP:linux + nginx + mysql + php
 
 yum groupinstall "Development tools" -y 
 ###########install mysql##################
