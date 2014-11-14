@@ -9,6 +9,9 @@
 
 ## Change Log ##
 
+2014-06-11
+> Documentation version is **1.0**, Documentation name is **Tools-By Robin Wen**, Comment is **All of Scripts pass-test**, By Robin。
+
 2014-11-11
 > Documentation version is **1.0**, Documentation name is **Tools-By Robin Wen**, Comment is **All of Scripts pass-test**, By Robin。
 
@@ -27,6 +30,9 @@
 * batch_add_user.sh [shell]
 * init_opt_system_robinwen.sh [shell]
 * oracle-install [d]
+* libvirt-bootstrap-robin.sh [shell]
+* auto_fix_bash_bug.sh [shell]
+* auto_imp_data_to_mysql.sh [shell]
 
 ## Scripts and Dirs Summary ##
 
@@ -71,7 +77,15 @@
 ### oracle-install [d] ###
 > Install  database software  11g  on your system. You may to use this scripts as root. Use this script in RHEL 6.1. CD the oracle-install dir, see the readme.txt, the you got it!
 
+### libvirt-bootstrap-robin.sh [shell] ###
+> Install libvirt and KVM for webvirtmgr. See at:https://github.com/retspen/webvirtmgr
 
+### auto_fix_bash_bug.sh [shell] ###
+> Auto fix bash bug. Use this script in all of linux distribution. Bug see at:http://seclists.org/oss-sec/2014/q3/650
+
+### auto_imp_data_to_mysql.sh [shell] ###
+> Auto import cmms data to MySQL. Use this script in RHEL 6.1. If you want use this script in Debian/Ubuntu, just change the Source function library.
+ 
 Enjoy!
 
 ## About Author ##
