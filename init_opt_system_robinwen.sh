@@ -159,7 +159,7 @@ do
 				hostname=`grep "HOSTNAME" $network | wc -l`
                 if [ $hostname -gt 0 ]
                 then
-                    read -p "Input your hostname(such as larrywen.host.com):" host
+                    read -p "Input your hostname(such as robinwen.host.com):" host
 					#如果不为空，修改
                     if [ $host != "" ]
                     then
@@ -169,7 +169,7 @@ do
                     fi
                 else
 					#接收用户输入的主机名
-					read -p "Input your hostname:(such as larrywen.host.com)" host
+					read -p "Input your hostname:(such as robinwen.host.com)" host
                     if [ $host != "" ]
 					#如果不为空，添加
 					then
