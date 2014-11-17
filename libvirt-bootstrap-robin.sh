@@ -3,7 +3,7 @@
 # Date: 2014-11-07 17:58:07
 # Desc: Install libvirt and KVM for webvirtmgr. See at:https://github.com/retspen/webvirtmgr
 
-# install_redhat_post
+# Install_redhat_post
 if [ -f /etc/sysconfig/libvirtd ]; then
     sed -i 's/#LIBVIRTD_ARGS/LIBVIRTD_ARGS/g' /etc/sysconfig/libvirtd
 else
@@ -25,7 +25,7 @@ else
     exit 1
 fi
 
-# daemons_running_redhat
+# Daemons_running_redhat
 if [ -f /etc/init.d/libvirtd ]; then
     service libvirtd stop > /dev/null 2>&1
     service libvirtd start

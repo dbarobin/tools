@@ -18,7 +18,7 @@ PASSWD="0Bna8m91Cf"
 DBNAME="cmms"
 
 
-# Source function library.
+# Source function library. Diff in Debian/Ubuntu.
 . /etc/rc.d/init.d/functions
 
 case $1 in

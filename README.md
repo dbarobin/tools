@@ -85,7 +85,7 @@
 
 ### auto_imp_data_to_mysql.sh [shell] ###
 > Auto import cmms data to MySQL. Use this script in RHEL 6.1. If you want use this script in Debian/Ubuntu, just change the Source function library.
- 
+
 Enjoy!
 
 ## About Author ##
