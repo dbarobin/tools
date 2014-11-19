@@ -15,6 +15,9 @@
 2014-11-11
 > Documentation version is **2.0**, Documentation name is **Tools-By Robin Wen**, Comment is **All of Scripts pass-test**, By Robin。
 
+2014-11-19
+> Documentation version is **2.1**, Documentation name is **Tools-By Robin Wen**, Comment is **Add the startup and shutdown scripts of nginx**, By Robin。
+
 ## Lists of File ##
 
 * auto_backup_database.sh [shell]
@@ -33,6 +36,8 @@
 * libvirt-bootstrap-robin.sh [shell]
 * auto_fix_bash_bug.sh [shell]
 * auto_imp_data_to_mysql.sh [shell]
+* nginx_old [shell]
+* nginx [shell]
 
 ## Scripts and Dirs Summary ##
 
@@ -85,6 +90,12 @@
 
 ### auto_imp_data_to_mysql.sh [shell] ###
 > Auto import cmms data to MySQL. Use this script in RHEL 6.1. If you want use this script in Debian/Ubuntu, just change the Source function library.
+
+### nginx_old [shell] ###
+> Nginx startup and shutdown script. Function of this script including start nginx, stop nginx, restart nginx and check nginx status. Use this script in RHEL 6.1. If you want use this script in Debian/Ubuntu, just change the Source function library.
+
+### nginx [shell] ###
+> This script starts and stops the nginx daemon. Function of this script including  start nginx, stop nginx, restart nginx, reload nginx, force reload nginx, test nginx configuration, and check nginx status. Use this script in RHEL 6.1. If you want use this script in Debian/Ubuntu, just change the Source function library.
 
 Enjoy!
 

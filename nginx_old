@@ -1,0 +1,64 @@
+#!/bin/bash
+# author: Robin Wen
+# date: 2014-09-18 10:02:38
+# desc: Nginx startup and shutdown script
+# chkconfig: - 85 15
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+# Define the nginx command path
+nginx=/usr/local/nginx/sbin/nginx
+
+case $1 in
+   start)
+       #echo "nginx is starting..."
+        num=`netstat -lanput|grep nginx|wc -l`
+        if [ $num -gt 0 ]
+        then
+            echo "Nginx is running..."
+        else
+            $nginx  && echo -ne "Nginx is start               [ \033[31;48mOK\033[0m ]\n"
+        fi
+       ;;
+   stop)
+       #echo "nginx is stoping..."
+       $nginx -s stop > /dev/null 2>&1
+       num2=`ps -ef|grep "nginx:"|grep -v grep|wc -l`
+       if [ $num2 -gt 0 ]
+       then
+           pkill -9 nginx
+       fi
+       echo -ne "Nginx is stoping                  [ \033[31;48mOK\033[0m ]\n"
+       ;;
+   restart)
+       #echo "nginx is restarting..."
+       $nginx -s stop > /dev/null 2>&1
+       num2=`ps -ef|grep "nginx:"|grep -v grep|wc -l`
+       if [ $num2 -gt 0 ]
+       then
+           pkill -9 nginx
+       fi
+       echo -ne "Nginx is stoping                  [ \033[31;48mOK\033[0m ]\n"
+        num=`netstat -lanput|grep nginx|wc -l`
+        if [ $num -gt 0 ]
+        then
+            echo "Nginx is running..."
+        else
+            $nginx  && echo -ne "Nginx is start                    [ \033[31;48mOK\033[0m ]\n"
+        fi
+       ;;
+   status)
+       #echo "nginx is statusing..."
+       num3=`netstat -lanput|grep nginx |wc -l`
+       if [ $num3 -gt 0 ]
+       then
+	   echo "Nginx is running..." 
+       else
+           echo "Nginx is stopped."
+       fi
+       ;;
+   *)
+       echo "usage $0     [start|stop|restart|status]"
+       ;;
+esac
