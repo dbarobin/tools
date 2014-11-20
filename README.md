@@ -18,6 +18,9 @@
 2014-11-19
 > Documentation version is **2.1**, Documentation name is **Tools-By Robin Wen**, Comment is **Add the startup and shutdown scripts of nginx**, By Robin。
 
+2014-11-20
+> Documentation version is **2.2**, Documentation name is **Tools-By Robin Wen**, Comment is **Add auto install and config apt-fast script**, By Robin。
+
 ## Lists of File ##
 
 * auto_backup_database.sh [shell]
@@ -38,6 +41,7 @@
 * auto_imp_data_to_mysql.sh [shell]
 * nginx_old [shell]
 * nginx [shell]
+* auto_install_config_apt_fast.sh [shell]
 
 ## Scripts and Dirs Summary ##
 
@@ -96,6 +100,9 @@
 
 ### nginx [shell] ###
 > This script starts and stops the nginx daemon. Function of this script including  start nginx, stop nginx, restart nginx, reload nginx, force reload nginx, test nginx configuration, and check nginx status. Use this script in RHEL 6.1. If you want use this script in Debian/Ubuntu, just change the Source function library.
+
+### auto_install_config_apt_fast.sh [shell] ###
+> Auto install and config apt-fast, use apt-fast instead apt-get. See at: http://xmodulo.com/speed-slow-apt-get-install-debian-ubuntu.html.  Use this script in debian 7.6 and run as root.
 
 Enjoy!
 
