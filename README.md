@@ -102,7 +102,7 @@
 > This script starts and stops the nginx daemon. Function of this script including  start nginx, stop nginx, restart nginx, reload nginx, force reload nginx, test nginx configuration, and check nginx status. Use this script in RHEL 6.1. If you want use this script in Debian/Ubuntu, just change the Source function library.
 
 ### auto_install_config_apt_fast.sh [shell] ###
-> Auto install and config apt-fast, use apt-fast instead apt-get. See at: http://xmodulo.com/speed-slow-apt-get-install-debian-ubuntu.html.  Use this script in debian 7.6 and run as root.
+> Auto install and config apt-fast, use apt-fast instead apt-get. See at: http://xmodulo.com/speed-slow-apt-get-install-debian-ubuntu.html. Use this script in debian 7.6 and run as root.
 
 Enjoy!
 
