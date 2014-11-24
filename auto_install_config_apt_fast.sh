@@ -1,8 +1,8 @@
 #!/bin/bash
-# author: Robin Wen
-# date: 2014-11-20 11:54:48
-# desc: Auto install and config apt-fast, use apt-fast instead apt-get. See at: http://xmodulo.com/speed-slow-apt-get-install-debian-ubuntu.html 
-# attention: Use this script in debian 7.6 and run as root.
+# Author: Robin Wen
+# Date: 2014-11-20 11:54:48
+# Desc: Auto install and config apt-fast, use apt-fast instead apt-get. See at: http://xmodulo.com/speed-slow-apt-get-install-debian-ubuntu.html 
+# Attention: Use this script in debian 7.6 and run as root.
 
 # Config locale
 echo "" > /etc/default/locale
