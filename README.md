@@ -21,6 +21,9 @@
 2014-11-20
 > Documentation version is **2.2**, Documentation name is **Tools-By Robin Wen**, Comment is **Add auto install and config apt-fast script**, By Robin。
 
+2014-12-12
+> Documentation version is **2.3**, Documentation name is **Tools-By Robin Wen**, Comment is **Add monodb startup script.**, By Robin。
+
 ## Lists of File ##
 
 * auto_backup_database.sh [shell]
@@ -42,6 +45,8 @@
 * nginx_old [shell]
 * nginx [shell]
 * auto_install_config_apt_fast.sh [shell]
+* mongod [shell]
+* mongod_debian [shell]
 
 ## Scripts and Dirs Summary ##
 
@@ -102,7 +107,13 @@
 > This script starts and stops the nginx daemon. Function of this script including  start nginx, stop nginx, restart nginx, reload nginx, force reload nginx, test nginx configuration, and check nginx status. Use this script in RHEL 6.1. If you want use this script in Debian/Ubuntu, just change the Source function library.
 
 ### auto_install_config_apt_fast.sh [shell] ###
-> Auto install and config apt-fast, use apt-fast instead apt-get. See at: http://xmodulo.com/speed-slow-apt-get-install-debian-ubuntu.html. Use this script in debian 7.6 and run as root.
+> Auto install and config apt-fast, use apt-fast instead apt-get. See at: http://xmodulo.com/speed-slow-apt-get-install-debian-ubuntu.html. Use this script in Debian 7.6 and run as root.
+
+### mongod_debian [shell] ###
+> Mongodb startup and shutdown script version 1.0. Use this script in Debian 7.6 and run as root.
+
+### mongod [shell]###
+>  Mongodb startup and shutdown script version 2.0. Use this script in Debian 7.6 and run as root.
 
 Enjoy!
 

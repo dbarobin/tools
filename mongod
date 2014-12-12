@@ -1,0 +1,89 @@
+#!/bin/bash
+# Author: Robin Wen
+# Date: 16:20:50 2014-12-12
+# Desc: Mongodb startup and shutdown scripts.
+
+# Mongod command path.
+mongod=/usr/local/mongodb/bin/mongod
+# MongoDB data path.
+mongod_data=/data/db
+# MongoDB config path.
+mongod_conf=/etc/mongod.conf
+# MongoDB log path.
+mongod_log=/var/log/mongodb.log
+# MongDB program name.
+prog=mongod
+
+RETVAL=0
+
+# Handle NUMA access to CPUs (SERVER-3574)
+# This verifies the existence of numactl as well as testing that the command works
+NUMACTL_ARGS="--interleave=all"
+if which numactl >/dev/null 2>/dev/null && numactl $NUMACTL_ARGS ls / >/dev/null 2>/dev/null
+then
+    NUMACTL="`which numactl` -- $NUMACTL_ARGS"
+    DAEMON_OPTS=${DAEMON_OPTS:-"--config $mongod_conf"}
+else
+    NUMACTL=""
+    DAEMON_OPTS="-- "${DAEMON_OPTS:-"--config $mongod_conf"}
+fi
+
+# Stop MongoDB function.
+stop() {
+    grep_mongo=`ps aux | grep -v grep | grep "${mongod}"`
+    if [ ${#grep_mongo} -gt 0 ]
+    then
+	echo "MongoDB Stopped!"
+		PID=`ps x | grep -v grep | grep "${mongod}" | awk '{ print $1 }'`
+		`kill -9 ${PID}`
+		RETVAL=$?
+    else
+		echo "MongoDB is not running."
+    fi
+}
+
+# Start MongoDB function.
+start() {
+    grep_mongo=`ps aux | grep -v grep | grep "${mongod}"`
+    if [ -n "${grep_mongo}" ]
+    then
+		echo "MongoDB is already running."
+    else
+		start-stop-daemon --background --start --quiet --exec $NUMACTL $mongod $DAEMON_OPTS
+		echo "MongoDB Started."
+		RETVAL=$?
+    fi
+}
+
+# MongoDB status funciton.
+status() {
+    grep_mongo=`ps aux | grep -v grep | grep "${mongod}"`
+    if [ -n "${grep_mongo}" ]
+    then
+		echo "MongoDB is running."
+    else
+		echo "MongoDB is stopped."
+		RETVAL=$?
+    fi
+}
+
+case "$1" in
+    start)
+		start
+	;;
+    stop)
+		stop
+	;;
+    restart)
+		stop
+		start
+	;;
+	status)
+		status
+	;;
+    *)
+		echo $"Usage: $prog {start|stop|restart|status}"
+		exit 1
+esac
+
+exit $RETVAL
