@@ -125,3 +125,5 @@ Enjoy!
 * Gmail：dbarobinwen@gmail.com
 * CSDN：http://blog.csdn.net/justdb
 * GitHub：https://github.com/dbarobin
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/dbarobin/tools/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
