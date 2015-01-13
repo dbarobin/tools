@@ -24,6 +24,9 @@
 2014-12-12
 > Documentation version is **2.3**, Documentation name is **Tools-By Robin Wen**, Comment is **Add monodb startup script.**, By Robin。
 
+2015-01-13
+> Documentation version is **2.3.1**, Documentation name is **Tools-By Robin Wen**, Comment is **Add shell_arguments_passing.sh.**, By Robin。
+
 ## Lists of File ##
 
 * auto_backup_database.sh [shell]
@@ -47,6 +50,8 @@
 * auto_install_config_apt_fast.sh [shell]
 * mongod [shell]
 * mongod_debian [shell]
+* shell_arguments_passing.sh [shell]
+* auto_update_master.sh [shell]
 
 ## Scripts and Dirs Summary ##
 
@@ -115,6 +120,12 @@
 ### mongod [shell]###
 >  Mongodb startup and shutdown script version 2.0. Use this script in Debian 7.6 and run as root.
 
+### shell_arguments_passing.sh [shell]###
+>  Passing arguments on shell.
+
+### auto_update_master.sh [shell]###
+>  Auto sync local repo to Github.
+
 Enjoy!
 
 ## About Author ##
@@ -123,7 +134,7 @@ Enjoy!
 
 * Robin Wen
 * Gmail：dbarobinwen@gmail.com
-* CSDN：http://blog.csdn.net/justdb
+* BLog：http://dbarobin.com
 * GitHub：https://github.com/dbarobin
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/dbarobin/tools/trend.png)](https://bitdeli.com/free "Bitdeli Badge")

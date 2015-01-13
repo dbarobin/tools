@@ -138,8 +138,8 @@ getopts_act()
     done
 }
 
-#getopts 命令解析选项和参数
-#优点：可在参数中包含空格如：-c "earth moon"
+# getopts 命令解析选项和参数
+# 优点：可在参数中包含空格如：-c "earth moon"
 #            选项字母和参数值之间可以没有空格如：-bdog
 #            可将未定义的选项绑定到?输出
 #            Unknow option: ?
