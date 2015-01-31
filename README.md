@@ -27,6 +27,9 @@
 2015-01-13
 > Documentation version is **2.3.1**, Documentation name is **Tools-By Robin Wen**, Comment is **Add shell_arguments_passing.sh.**, By Robin。
 
+2015-01-31
+> Documentation version is **2.3.2**, Documentation name is **Tools-By Robin Wen**, Comment is **Add tool of auto deploy app.**, By Robin。
+
 ## Lists of File ##
 
 * auto_backup_database.sh [shell]
@@ -52,6 +55,7 @@
 * mongod_debian [shell]
 * shell_arguments_passing.sh [shell]
 * auto_update_master.sh [shell]
+* auto_deploy.sh [shell]
 
 ## Scripts and Dirs Summary ##
 
@@ -125,6 +129,9 @@
 
 ### auto_update_master.sh [shell]###
 >  Auto sync local repo to Github.
+
+### auto_deploy.sh [shell] ###
+>  Tool of auto deploy, see at: http://git.io/F85N
 
 Enjoy!
 
