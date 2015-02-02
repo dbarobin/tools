@@ -79,8 +79,8 @@
 > Auto install LAMP in rhel 6.1. Use this script in RHEL 6.1. You must prepare the following packages in the opt dir: mysql-5.1.59.tar.gz, httpd-2.2.21.tar.gz, php-5.3.6.tar.bz2.
 
 ### auto_install_lnmp.sh [shell] ###
-> LANP:Linux + Nginx + MySQL + PHP
-> Auto install LAMP in rhel 6.1. Use this script in RHEL 6.1. You must prepare the following packages in the opt dir: mysql-5.1.59.tar.gz, nginx-1.2.6.tar.gz, php-5.3.6.tar.bz2.
+> LNMP:Linux + Nginx + MySQL + PHP
+> Auto install LNMP in rhel 6.1. Use this script in RHEL 6.1. You must prepare the following packages in the opt dir: mysql-5.1.59.tar.gz, nginx-1.2.6.tar.gz, php-5.3.6.tar.bz2.
 
 ### auto_config_mysql.sh [shell] ###
 > Auto config mysql after the mysql installation.
@@ -98,13 +98,13 @@
 > Script of Initialize and Optimizie Linux System. Use this script in RHEL 6.1.
 
 ### oracle-install [d] ###
-> Install  database software  11g  on your system. You may to use this scripts as root. Use this script in RHEL 6.1. CD the oracle-install dir, see the readme.txt, the you got it!
+> Install database software 11g  on your system. You may to use this scripts as root. Use this script in RHEL 6.1. CD the oracle-install dir, see the readme.txt, the you got it!
 
 ### libvirt-bootstrap-robin.sh [shell] ###
-> Install libvirt and KVM for webvirtmgr. See at:https://github.com/retspen/webvirtmgr
+> Install libvirt and KVM for webvirtmgr. See at: https://github.com/retspen/webvirtmgr
 
 ### auto_fix_bash_bug.sh [shell] ###
-> Auto fix bash bug. Use this script in all of linux distribution. Bug see at:http://seclists.org/oss-sec/2014/q3/650
+> Auto fix bash bug. Use this script in all of linux distribution. Bug see at: http://seclists.org/oss-sec/2014/q3/650
 
 ### auto_imp_data_to_mysql.sh [shell] ###
 > Auto import cmms data to MySQL. Use this script in RHEL 6.1. If you want use this script in Debian/Ubuntu, just change the Source function library.
