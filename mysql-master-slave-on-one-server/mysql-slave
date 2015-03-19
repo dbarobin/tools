@@ -1,0 +1,110 @@
+#!/bin/bash
+# Author: Robin Wen
+# Date: 2015-03-19 17:02:39
+# Desc: Startup and shutdown scripts of MySQL Server.
+
+#### Declare variables ###
+# Type of MySQL Server.
+mysql_type=slave
+# Port of MySQL Server.
+mysql_port=3307
+# Socket name of MySQL Server.
+mysql_sock_name="mysql-slave.sock"
+# Socket absolute path of MySQL Server.
+mysql_sock="/tmp/mysql-slave.sock"
+# Configuration file of MySQL Server.
+mysal_conf=/etc/slave.cnf
+# Username of MySQL Server user.
+mysql_username="root"
+# Password of MySQL Server user.
+mysql_password="root"
+
+# Function of starting MySQL Server.
+function_start_mysql()
+{
+	# Analyze MySQL Server port.
+	slave_port_wc=`netstat -langput | grep ${mysql_port} | wc -l`
+	if [[ $slave_port_wc -gt 0 ]]
+	then
+		printf "MySQL already started."
+	else
+		printf "Starting MySQL...\n"
+		/bin/sh /usr/local/mysql-slave/bin/mysqld_safe --defaults-file=$mysal_conf 2>&1 > /dev/null &
+	fi
+}
+
+# Function of stoping MySQL Server.
+function_stop_mysql()
+{
+	# Analyze MySQL Server socket.
+	sock_wc=`find /tmp -name "*${mysql_sock_name}*" | wc -l`
+	if [[ $sock_wc -gt 0 ]] 
+	then
+		printf "Stoping MySQL...\n"
+		/usr/local/mysql-slave/bin/mysqladmin -u ${mysql_username} -p${mysql_password} -S $mysql_sock shutdown
+	else
+		printf "Sockets not exists...\n"
+	fi
+
+	# Second method, just invoke function_kill_mysql.
+	#function_kill_mysql
+}
+
+# Function of restarting MySQL Server.
+function_restart_mysql()
+{
+	printf "Restarting MySQL...\n"
+	function_stop_mysql
+	function_start_mysql
+}
+
+# Function of killing MySQL Server.
+function_kill_mysql()
+{
+	# Analyze MySQL Servier process information.
+	mysqld_safe_wc=`ps -ef | grep 'mysqld_safe' | grep ${mysql_type} | wc -l`
+	mysqld_wc=`ps -ef | grep 'mysqld' | grep ${mysql_type} | wc -l`
+	if [[ $mysqld_safe_wc -gt 0 && $mysqld_wc -gt 0 ]]
+	then
+		kill -9 $(ps -ef | grep 'mysqld_safe' | grep ${mysql_type} | awk '{printf $2}')
+		kill -9 $(ps -ef | grep 'mysqld' | grep ${mysql_type} | awk '{printf $2}')
+		
+		printf "MySQL is stopped.\n"
+	else
+		printf "MySQL process not exists.\n"
+	fi
+}
+
+# Function of analyzing status of MySQL Server.
+function_status_mysql()
+{
+	slave_port_wc=`netstat -langput | grep ${mysql_port} | wc -l`
+	if [[ $slave_port_wc -gt 0 ]]
+	then
+		printf "MySQL is running...\n"
+	else
+		printf "MySQL is not running...\n"
+	fi
+}
+
+# Function of Menu.
+case $1 in
+	start)
+		function_start_mysql
+		;;
+	stop)
+		function_stop_mysql
+		;;
+	kill)
+		function_kill_mysql
+		;;
+	restart)
+		function_stop_mysql
+		function_start_mysql
+		;;
+	status)
+		function_status_mysql
+		;;
+	*)
+		echo "Usage: $0 {start|stop|restart|kill|status}";;
+esac
