@@ -13,7 +13,7 @@ mysql_sock_name="mysql-slave.sock"
 # Socket absolute path of MySQL Server.
 mysql_sock="/tmp/mysql-slave.sock"
 # Configuration file of MySQL Server.
-mysal_conf=/etc/slave.cnf
+mysql_conf=/etc/slave.cnf
 # Username of MySQL Server user.
 mysql_username="root"
 # Password of MySQL Server user.
@@ -29,7 +29,7 @@ function_start_mysql()
 		printf "MySQL already started."
 	else
 		printf "Starting MySQL...\n"
-		/bin/sh /usr/local/mysql-slave/bin/mysqld_safe --defaults-file=$mysal_conf 2>&1 > /dev/null &
+		/bin/sh /usr/local/mysql-slave/bin/mysqld_safe --defaults-file=$mysql_conf 2>&1 > /dev/null &
 	fi
 }
 
