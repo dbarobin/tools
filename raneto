@@ -15,7 +15,7 @@ function_start()
 		echo "Raneto already started."
 	else
 		echo "Raneto starting..."
-		cd /data/Raneto-0.6.0 && npm start & >/dev/null 2>&1
+		nohup /etc/init.d/raneto.sh > /var/log/raneto.out 2>&1 &
 	fi
 }
 
