@@ -1,0 +1,69 @@
+#!/bin/sh
+# Author: Robin Wen
+# Date: 16:15:27 2015-03-30
+# Desc: Startup and shutdown scripts for Raneto.
+
+# Import functions.
+. /lib/lsb/init-functions
+
+# Function of starting Raneto.
+function_start()
+{
+	count=`ps -ef | grep node | grep -v grep | wc -l`
+	if [ $count -gt 0 ]
+	then
+		echo "Raneto already started."
+	else
+		echo "Raneto starting..."
+		cd /data/Raneto-0.6.0 && npm start & >/dev/null 2>&1
+	fi
+}
+
+# Function of stoping Raneto.
+function_stop()
+{
+	count=`ps -ef | grep node | grep -v grep | wc -l`
+	if [ $count -gt 0 ]
+	then
+		ps -ef | grep node | grep -v grep | cut -c 9-15 | xargs kill -9
+	else
+		echo "Raneto already stopped."
+	fi
+}
+
+# Function of Raneto status.
+function_status()
+(
+	count=`ps -ef | grep node | grep -v grep | wc -l`
+	if [ $count -gt 0 ]
+	then
+		echo "Raneto is started."
+	else
+		echo "Raneto is stopped."
+	fi
+)
+
+case "$1" in
+	start)
+		function_start
+		;;
+
+	stop)
+		function_stop	
+		;;
+
+	restart)
+		function_stop
+		function_start	
+		;;
+
+	status)
+		function_status
+		;;
+	*)
+		echo "Usage: $0 {start|stop|restart|status}" >&2
+		exit 1
+		;;
+esac
+
+exit 0
