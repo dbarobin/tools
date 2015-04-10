@@ -30,6 +30,9 @@
 2015-01-31
 > Documentation version is **2.3.2**, Documentation name is **Tools-By Robin Wen**, Comment is **Add tool of auto deploy app.**, By Robin。
 
+2015-04-10
+> Documentation version is **2.3.3**, Documentation name is **Tools-By Robin Wen**, Comment is **Add multiple tools.**, By Robin。
+
 ## Lists of File ##
 
 * auto_backup_database.sh [shell]
@@ -56,6 +59,12 @@
 * shell_arguments_passing.sh [shell]
 * auto_update_master.sh [shell]
 * auto_deploy.sh [shell]
+* mysql-master-slave-on-one-server [d]
+* mysql_trigger_audit.sql [sql]
+* raneto [shell]
+* raneto.sh [shell]
+* multiple_line_comments.sh [shell]
+* multiple_mysql.sh [shell]
 
 ## Scripts and Dirs Summary ##
 
@@ -132,6 +141,24 @@
 
 ### auto_deploy.sh [shell] ###
 >  Tool of auto deploy, see at: http://git.io/F85N
+
+### mysql-master-slave-on-one-server [d] ###
+> MySQL replication. Shutdown and startup scripts of master and slave on one server.
+
+### mysql_trigger_audit.sql [sql] ###
+> MySQL audit trigger test scripts.
+
+### raneto [shell] ###
+> Shutdown and startup srcript of raneto, which is a static markdown supported websites based on Node.js.
+
+### raneto.sh [shell] ###
+> Raneto related shutdown and startup scripts.
+
+### multiple_line_comments.sh [shell] ###
+> Mulitple line comments in the Shell scripts.
+
+### multiple_mysql.sh [shell] ###
+> Scripts of multiple MySQL instance on one server.
 
 Enjoy!
 
